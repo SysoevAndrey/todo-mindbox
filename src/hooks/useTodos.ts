@@ -28,6 +28,8 @@ export const useTodos = () => {
     setTodos((todos) => todos.filter((todo) => !todo.completed));
   }, []);
 
+  const activeTodosCount = todos.filter((todo) => !todo.completed).length;
+
   const filteredTodos = todos.filter((todo) => {
     if (filter === 'active') return !todo.completed;
     if (filter === 'completed') return todo.completed;
@@ -36,6 +38,7 @@ export const useTodos = () => {
 
   return {
     todos: filteredTodos,
+    activeTodosCount,
     addTodo,
     toggleTodo,
     applyFilter,

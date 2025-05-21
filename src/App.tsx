@@ -7,10 +7,14 @@ import { useTodos } from './hooks/useTodos';
 import './App.css';
 
 function App() {
-  const { todos, addTodo, toggleTodo, applyFilter, clearCompleted } =
-    useTodos();
-
-  const activeTodosCount = todos.filter((todo) => !todo.completed).length;
+  const {
+    todos,
+    activeTodosCount,
+    addTodo,
+    toggleTodo,
+    applyFilter,
+    clearCompleted,
+  } = useTodos();
 
   return (
     <div className="app">
