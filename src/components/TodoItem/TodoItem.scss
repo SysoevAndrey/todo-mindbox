@@ -1,0 +1,18 @@
+.todo-item {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 16px 0;
+  border-bottom: 1px solid #ccc;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__label {
+    &_completed {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+  }
+}
